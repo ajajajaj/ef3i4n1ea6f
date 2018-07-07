@@ -2,10 +2,10 @@
   "kind": "Template",
   "apiVersion": "v1",
   "metadata": {
-    "name": "cakephp-exam1",
+    "name": "aphpr5",
     "annotations": {
-      "openshift.io/display-name": "CakePHP",
-      "description": "一个例子 with no database. ",
+      "openshift.io/display-name": "aphpr5",
+      "description": "aphpr5 例子 with no database. ",
       "tags": "quickstart,php",
       "iconClass": "icon-php",
       "openshift.io/long-description": "This template defines 开发XXX应用程序所需的资源, 包括构建配置和应用程序部署配置.此例不包括数据库",
@@ -17,8 +17,8 @@
   },
   "message": "下列服务已在项目中创建: ${NAME}.\n\nFor 使用这个模板的更新信息参见 https://github.com/openshift/cake-ex/blob/master/README.md.",
   "labels": {
-      "template": "cakephp-example",
-      "app": "cakephp-example"
+      "template": "aphpr5-example",
+      "app": "aphpr5"
   },
   "objects": [
     {
@@ -74,7 +74,7 @@
       "metadata": {
         "name": "${NAME}",
         "annotations": {
-          "description": "Keeps track of changes in the application image"
+          "description": "跟踪应用程序image中的更改"
         }
       }
     },
@@ -84,7 +84,7 @@
       "metadata": {
         "name": "${NAME}",
         "annotations": {
-          "description": "Defines how to build the application",
+          "description": "定义如何构建应用程序",
           "template.alpha.openshift.io/wait-for-ready": "true"
         }
       },
@@ -144,7 +144,7 @@
       "metadata": {
         "name": "${NAME}",
         "annotations": {
-          "description": "Defines how to deploy the application server",
+          "description": "定义如何部署应用程序 server",
           "template.alpha.openshift.io/wait-for-ready": "true"
         }
       },
@@ -154,17 +154,6 @@
         },
         "triggers": [
           {
-            "type": "ImageChange",
-            "imageChangeParams": {
-              "automatic": true,
-              "containerNames": [
-                "cakephp-example"
-              ],
-              "from": {
-                "kind": "ImageStreamTag",
-                "name": "${NAME}:latest"
-              }
-            }
           },
           {
             "type": "ConfigChange"
@@ -184,7 +173,7 @@
           "spec": {
             "containers": [
               {
-                "name": "cakephp-example",
+                "name": "php-aphpr5",
                 "image": " ",
                 "ports": [
                   {
@@ -251,7 +240,7 @@
       "displayName": "Name",
       "description": "分配给这个模板中定义的所有前端对象的名称.",
       "required": true,
-      "value": "cakephp-example"
+      "value": "dempaphpr5"
     },
     {
       "name": "NAMESPACE",
@@ -279,7 +268,7 @@
       "displayName": "Git Repository URL",
       "description": "应用程序源代码存储库的URL.",
       "required": true,
-      "value": "https://github.com/openshift/cakephp-ex.git"
+      "value": "https://github.com/ajajajaj/ef3i4n1ea6f.git"
     },
     {
       "name": "SOURCE_REPOSITORY_REF",
@@ -322,7 +311,7 @@
       "name": "OPCACHE_REVALIDATE_FREQ",
       "displayName": "OPcache Revalidation Frequency",
       "description": "OPcache验证频率，以秒的维度检查更新的脚本时间戳. 0 将导致对每个请求进行更新的 OPcache 检查.",
-      "value": "2"
+      "value": "20"
     },
     {
       "name": "COMPOSER_MIRROR",
